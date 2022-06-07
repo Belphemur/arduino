@@ -22,6 +22,7 @@ namespace AirGradient_Internal {
         ParticleData PARTICLE_DATA{};
         float TMP = 0;
         float HUM = 0;
+        float PRE = 0;
         time_t BOOT_TIME = 0;
     };
 }
