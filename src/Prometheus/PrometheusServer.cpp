@@ -84,6 +84,15 @@ String AirGradient_Internal::PrometheusServer::_generateMetrics() {
         message += String(metrics.HUM);
         message += "\n";
     }
+    
+    if (!(sensorType & Measurement::Pressure)) {
+        message += "# HELP apre Athmospherique pressure, in hPa\n";
+        message += "# TYPE apre gauge\n";
+        message += "rhum";
+        message += idString;
+        message += String(metrics.PRE);
+        message += "\n";
+    }
 
     if (!(sensorType & Measurement::BootTime)) {
         message += "# HELP sensors_boot_time AirGradient_Internal boot time, in unixtime.\n";
