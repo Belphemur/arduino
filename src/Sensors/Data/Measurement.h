@@ -7,7 +7,7 @@ namespace AirGradient_Internal {
     /**
      * Represent the type of data the sensor can provide. Can be multiple. Used as flag.
      */
-    enum class Measurement : uint8_t {
+    enum class Measurement : uint16_t {
         /**
          * Used to check flags, please don't assign it to your sensor.
          */
@@ -45,7 +45,12 @@ namespace AirGradient_Internal {
         /***
          * Ethanol gas
          */
-        ETHANOL = 1 << 7
+        ETHANOL = 1 << 7,
+
+        /***
+         * Pressure
+         */
+        Pressure = 1 << 8
     };
 
 
