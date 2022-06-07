@@ -88,7 +88,7 @@ String AirGradient_Internal::PrometheusServer::_generateMetrics() {
     if (!(sensorType & Measurement::Pressure)) {
         message += "# HELP apre Athmospherique pressure, in hPa\n";
         message += "# TYPE apre gauge\n";
-        message += "rhum";
+        message += "apre";
         message += idString;
         message += String(metrics.PRE);
         message += "\n";
