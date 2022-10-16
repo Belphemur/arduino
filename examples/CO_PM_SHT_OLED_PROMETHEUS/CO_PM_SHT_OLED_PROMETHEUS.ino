@@ -3,7 +3,6 @@
  * tiny HTTP server to serve air quality metrics to Prometheus.
  */
 
-#include "main.h"
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
 
